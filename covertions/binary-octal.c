@@ -1,4 +1,5 @@
 
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -6,10 +7,10 @@
 
 int main(){
 
-	int n, count, temp, tempin mod, modin, power, sum, result;
+	int n, count, temp, tempin ,mod, modin, power, sum, result;
 	char s[20], total[20];	
 	scanf("%d" , &n);
-	
+	temp = n;
 	while(temp !=0)
 	{
 		mod = temp % 1000;
@@ -20,11 +21,13 @@ int main(){
 		{
 			modin = tempin % 10;
 			power = modin * pow(2 , count);
-			sum = sum + power;	
+			sum = sum + power;
 			tempin = tempin / 10;
 			count++;
 		}
-	
+		
+		
+	    printf("the sum is %d\n" , sum);
     		sprintf( s, "%d" , sum);
 		strcat(total , s);
 		result = atoi(total);
@@ -35,3 +38,4 @@ int main(){
 	return 0;
 		
 }
+
